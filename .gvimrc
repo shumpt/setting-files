@@ -1,5 +1,9 @@
 "フォントの設定
-set guifont=Consolas:h10 guifontwide=MeiryoKe_Gothic:h10
+if has('win32')
+    set guifont=Consolas:h10 guifontwide=MeiryoKe_Gothic:h10
+else
+    set guifont=Inconsolata\ 12 guifontwide=Takao
+endif
 
 "文字コードの設定
 set encoding=utf-8
@@ -63,8 +67,9 @@ let g:solarized_italic=0
 colorscheme solarized
 
 "バックアップファイルとswpファイルの場所を変更
-set directory=C:\apps\vim\swp
-set backupdir=C:\apps\vim\bak
+
+set directory=~/vimfiles/swp
+set backupdir=~/vimfiles/bak
 
 "Uniteの設定
 let g:unite_split_rule="botright"
